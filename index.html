@@ -117,11 +117,41 @@
         height: 140px;
       }
     }
+    .made-with-love {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  border-radius: 999px;
+  z-index: 9999;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: default;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.made-with-love span {
+  margin: 0 2px;
+}
+
+.made-with-love:hover {
+  transform: translateY(-2px) scale(1.03);
+  opacity: 0.95;
+}
+
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Chatting World</h1>
+
+    <div class="made-with-love">
+  Made with <span>❤️</span> by Kaushik
+</div>
 
     <!-- Group Profile Picture (CENTERED) -->
     <img src="photo_2026-01-05_15-00-44.jpg" alt="Chatting World PFP" class="pfp" />
