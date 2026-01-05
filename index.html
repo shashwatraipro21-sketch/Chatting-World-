@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatting World | Join Telegram</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #2c2c2c, #0f2027);
+      overflow: hidden;
+      color: #fff;
+    }
+
+    /* Animated background border */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 2px solid transparent;
+      background: linear-gradient(120deg, #00f2ea, #1da1f2, #8e2de2) border-box;
+      -webkit-mask:
+        linear-gradient(#000 0 0) padding-box,
+        linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: borderMove 6s linear infinite;
+    }
+
+    @keyframes borderMove {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(12px);
+      padding: 50px 60px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+      animation: float 4s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      font-size: 42px;
+      font-weight: 700;
+      margin-bottom: 35px;
+      background: linear-gradient(90deg, #00f2ea, #1da1f2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 1.5px;
+    }
+
+    .pfp {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 35px;
+      border: 4px solid rgba(255,255,255,0.9);
+      box-shadow:
+        0 0 30px rgba(29,161,242,0.7),
+        0 0 60px rgba(0,242,234,0.4);
+    }
+
+    .join-btn {
+      display: inline-block;
+      padding: 18px 55px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #1da1f2, #00f2ea);
+      box-shadow: 0 15px 40px rgba(29,161,242,0.5);
+      transition: all 0.3s ease;
+    }
+
+    .join-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 20px 60px rgba(0,242,234,0.8);
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 40px 30px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .pfp {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Chatting World</h1>
+
+    <!-- Group Profile Picture (CENTERED) -->
+    <img src="pfp.jpg" alt="Chatting World PFP" class="pfp" />
+
+    <!-- Telegram Join Button -->
+    <a href="https://t.me/+rnaHj0B2XmM2YTll" class="join-btn">Click to Join</a>
+  </div>
+</body>
+</html>
